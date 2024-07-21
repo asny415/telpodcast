@@ -8,7 +8,7 @@ onMounted(() => {
   tutarials.value = lang == 'zh-CN' ? [
     '一、添加机器人 <a href="https://t.me/telpodcast_bot">TelPodcast</a>',
     "二、直接给机器人发送播客名字进行搜索",
-    "三、订阅你找到的播客，有新单集发布时你将直接收到单集音频"
+    "三、订阅你感兴趣的播客，有新单集发布时你将直接收到音频通知"
 
   ] : [
     "step1: add bot telpodcast to your contact!",
