@@ -31,7 +31,7 @@ jobs:
 
       - name: Fetch content from secret URL
         env:
-          SECRET_URL: ${{ secrets.HOTS_URL }}
+          SECRET_URL: ${{ secrets.HOTSURL }}
         run: |
           curl -o dist/hots.json $SECRET_URL
 
