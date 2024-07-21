@@ -27,7 +27,10 @@ onMounted(async () => {
   <div class="root">
     <div class="header">
       <img class="logo" src="/telpodcast.jpg" />
-      <span class="title">Telpodcast</span>
+      <div class="titles">
+        <span class="title">Telpodcast</span>
+        <span class="subtitle">Listen podcast from telegram</span>
+      </div>
     </div>
     <div class="tutarial">
       <div v-for="line in tutarials" class="tutaline" v-html="line"></div>
@@ -46,10 +49,15 @@ onMounted(async () => {
 </template>
 
 <style scoped>
+.titles {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
 .title {
   font-size: x-large;
   text-align: center;
-  margin-top: 1em;
 }
 
 .hotline {
