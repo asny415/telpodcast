@@ -27,11 +27,8 @@ jobs:
           deno-version: v1.x
 
       - name: Build step
-        env:
-          HOTS: ${{ secrets.HOTS_URL }}
         run: |
             "deno task build"
-            "/usr/bin/curl $env:HOTS > dist/hots.json"
         
 
       - name: Upload to Deno Deploy
