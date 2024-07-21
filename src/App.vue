@@ -42,7 +42,8 @@ onMounted(async () => {
       </div>
     </div>
     <div class="footer">
-      <div>Powered by asny415</div>
+      <div style="display: flex;align-items: center;">Powered by asny415 && Deno<img
+          style="margin-left: 1em; width:1em;height:1em;" src="/vite-deno.svg" /></div>
       <div v-html="contact"></div>
     </div>
   </div>
