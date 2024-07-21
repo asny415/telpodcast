@@ -31,7 +31,7 @@ jobs:
           HOTS: ${{ secrets.HOTS_URL }}
         run: |
             "deno task build"
-            "curl $env:HOTS > dist/hots.json"
+            "/usr/bin/curl $env:HOTS > dist/hots.json"
         
 
       - name: Upload to Deno Deploy
