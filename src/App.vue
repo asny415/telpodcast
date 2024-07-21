@@ -2,9 +2,14 @@
 import { onMounted, ref } from 'vue'
 const tutarials = ref([])
 const contact = ref('')
-onMounted(() => {
+const hots = ref([])
+const hotsTitle = ref('')
+onMounted(async () => {
   const lang = navigator.language
+  const rsp = await fetch(`/hots.json`)
+  hots.value = await rsp.json()
   contact.value = lang == 'zh-CN' ? '<a href="mailto:asny415@gmail.com">联系我</a>' : '<a href="mailto:asny415@gmail.com">Contact me</a>'
+  hotsTitle.value = lang == 'zh-CN' ? '热门排行' : 'Hots'
   tutarials.value = lang == 'zh-CN' ? [
     '一、添加机器人 <a href="https://t.me/telpodcast_bot">TelPodcast</a>',
     "二、直接给机器人发送播客名字进行搜索",
@@ -27,7 +32,12 @@ onMounted(() => {
     <div class="tutarial">
       <div v-for="line in tutarials" class="tutaline" v-html="line"></div>
     </div>
-    <div class="hots"></div>
+    <div class="hots">
+      <div class="title">{{ hotsTitle }}</div>
+      <div>
+        <div class="hotline" v-for="hot in hots"> <a :href="hot.xml" target="_blank">{{ hot.name }}</a></div>
+      </div>
+    </div>
     <div class="footer">
       <div>Powered by asny415</div>
       <div v-html="contact"></div>
@@ -36,6 +46,16 @@ onMounted(() => {
 </template>
 
 <style scoped>
+.title {
+  font-size: x-large;
+  text-align: center;
+  margin-top: 1em;
+}
+
+.hotline {
+  margin-top: 0.3em;
+}
+
 .hots {
   flex: 1;
 }
