@@ -50,7 +50,7 @@ onMounted(async () => {
     <div class="hottitle">{{ hotsTitle }}</div>
     <div v-if="langs.length > 1">
       <span @click="hotlang = lang" :class="hotlang == lang ? ['selected'] : []"
-        style="font-size: small; cursor: pointer;"> {{ lang }}
+        style="font-size: small; cursor: pointer;"> {{ lang.toUpperCase() }}
       </span>
       <span @click="hotlang = l" :class="hotlang == l ? ['selected'] : []"
         style="margin-left: 0.5em; cursor: pointer; font-size: small;" v-for="l in langs.slice(1)">{{
