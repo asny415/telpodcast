@@ -69,10 +69,10 @@ onMounted(async () => {
     <div class="footer">
       <div style="display: flex;align-items: center;">Powered by asny415 && Deno<img
           style="margin-left: 1em; width:1em;height:1em;" src="/vite-deno.svg" /></div>
-      <div style="display: flex;align-items: center;">{{ contact }}
+      <div style="margin-top: 0.5em; display: flex;align-items: center;">{{ contact }}
         <a style="margin-left: 0.5em;" href="mailto:asny415@gmail.com">📧</a>
-        <a style="margin-left: 0.5em;" href="https://t.me/asny415"><img style="width: 1em;height: 1em;"
-            src="/telegram.png" /></a>
+        <a style="margin-left: 0.8em; margin-top: 0.3em;" href="https://t.me/asny415"><img
+            style="width: 1em;height: 1em;" src="/telegram.png" /></a>
       </div>
     </div>
   </div>
@@ -125,7 +125,7 @@ onMounted(async () => {
   justify-content: center;
   font-family: 'Courier New', Courier, monospace;
   opacity: 0.6;
-  padding: 1em 0 1em 0;
+  padding: 1em 0 2em 0;
   font-size: small;
   font-weight: bold;
   margin-top: 10em;
