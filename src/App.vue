@@ -16,7 +16,7 @@ onMounted(async () => {
   const rsp = await fetch(`/hots.json`)
   const globalhots = await rsp.json()
   hots.value = globalhots[lang.slice(0, 2)] || globalhots['zh'] || []
-  contact.value = lang == 'zh-CN' ? '<a href="mailto:asny415@gmail.com">联系我</a>' : '<a href="mailto:asny415@gmail.com">Contact me</a>'
+  contact.value = lang == 'zh-CN' ? '联系我：' : 'Contact me:'
   hotsTitle.value = lang == 'zh-CN' ? '热门排行' : 'Hots'
   tutarials.value = lang == 'zh-CN' ? [
     '一、添加机器人 <a href="https://t.me/telpodcast_bot">TelPodcast</a>',
@@ -58,7 +58,11 @@ onMounted(async () => {
     <div class="footer">
       <div style="display: flex;align-items: center;">Powered by asny415 && Deno<img
           style="margin-left: 1em; width:1em;height:1em;" src="/vite-deno.svg" /></div>
-      <div v-html="contact"></div>
+      <div style="display: flex;align-items: center;">{{ contact }}
+        <a style="margin-left: 0.5em;" href="mailto:asny415@gmail.com">📧</a>
+        <a style="margin-left: 0.5em;" href="https://t.me/asny415"><img style="width: 1em;height: 1em;"
+            src="/telegram.png" /></a>
+      </div>
     </div>
   </div>
 </template>
