@@ -77,6 +77,8 @@ onMounted(async () => {
 
 .hots {
   flex: 1;
+  width: 90vw;
+  max-width: 50em;
 }
 
 .footer {
