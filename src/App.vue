@@ -87,7 +87,7 @@ onMounted(async () => {
 
 .selected {
   border: 1px solid;
-  padding: 0.3em;
+  padding: 0.2em 0.4em;
   border-radius: 0.3em;
 }
 
