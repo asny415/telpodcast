@@ -66,6 +66,7 @@ onMounted(async () => {
 .title {
   font-size: x-large;
   text-align: center;
+  margin-bottom: 2em;
 }
 
 .hotline {
@@ -94,7 +95,7 @@ onMounted(async () => {
   padding: 1em 0 1em 0;
   font-size: small;
   font-weight: bold;
-  margin-top: 3em;
+  margin-top: 10em;
 }
 
 .tutaline {
