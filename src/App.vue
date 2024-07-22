@@ -79,6 +79,8 @@ onMounted(async () => {
   flex: 1;
   width: 90vw;
   max-width: 50em;
+  padding: 1em;
+  margin-top: 3em;
 }
 
 .footer {
