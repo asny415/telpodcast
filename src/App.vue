@@ -99,7 +99,7 @@ onMounted(async () => {
 .hottitle {
   font-size: x-large;
   text-align: center;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
   margin-top: 3em;
 }
 
