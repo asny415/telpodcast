@@ -37,7 +37,7 @@ onMounted(async () => {
       <div v-for="line in tutarials" class="tutaline" v-html="line"></div>
     </div>
     <div class="hots">
-      <div class="title">{{ hotsTitle }}</div>
+      <div class="hottitle">{{ hotsTitle }}</div>
       <div>
         <div class="hotline" v-for="hot in hots">
           <img style="width:2.5em;height: 2.5em;" :src="hot.thumb" />
@@ -64,6 +64,11 @@ onMounted(async () => {
 }
 
 .title {
+  font-size: x-large;
+  text-align: center;
+}
+
+.hottitle {
   font-size: x-large;
   text-align: center;
   margin-bottom: 2em;
