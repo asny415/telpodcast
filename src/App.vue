@@ -100,7 +100,7 @@ onMounted(async () => {
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  width: 50vw;
+  width: 90vw;
   max-width: 20em;
   padding: 1em;
   margin-top: 3em;
