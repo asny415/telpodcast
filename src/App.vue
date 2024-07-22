@@ -4,6 +4,13 @@ const tutarials = ref([])
 const contact = ref('')
 const hots = ref([])
 const hotsTitle = ref('')
+
+function cleanText(text: string) {
+  var tempElement = document.createElement('div');
+  tempElement.innerHTML = text;
+  return tempElement.textContent || tempElement.innerText || '';
+}
+
 onMounted(async () => {
   const lang = navigator.language
   const rsp = await fetch(`/hots.json`)
@@ -43,8 +50,8 @@ onMounted(async () => {
           <img style="width:2.5em;height: 2.5em;" :src="hot.thumb" />
           <a style="margin-left: 1em; width:8em; text-align: center;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;"
             :href="hot.home" target="_blank">{{ hot.name }}</a>
-          <span style="flex:1;margin-left:1em;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;"
-            v-html="hot.slogan"></span>
+          <span style="flex:1;margin-left:1em;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;">{{
+        cleanText(hot.slogan) }}</span>
         </div>
       </div>
     </div>
