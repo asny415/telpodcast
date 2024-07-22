@@ -91,9 +91,10 @@ onMounted(async () => {
   justify-content: center;
   font-family: 'Courier New', Courier, monospace;
   opacity: 0.6;
-  padding: 2em 0 5em 0;
+  padding: 1em 0 5em 0;
   font-size: small;
   font-weight: bold;
+  margin-top: 3em;
 }
 
 .tutaline {
