@@ -7,7 +7,8 @@ const hotsTitle = ref('')
 onMounted(async () => {
   const lang = navigator.language
   const rsp = await fetch(`/hots.json`)
-  hots.value = await rsp.json()
+  const globalhots = await rsp.json()
+  hots.value = globalhots[lang.slice(0, 2)] || globalhots['zh'] || []
   contact.value = lang == 'zh-CN' ? '<a href="mailto:asny415@gmail.com">联系我</a>' : '<a href="mailto:asny415@gmail.com">Contact me</a>'
   hotsTitle.value = lang == 'zh-CN' ? '热门排行' : 'Hots'
   tutarials.value = lang == 'zh-CN' ? [
