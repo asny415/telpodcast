@@ -38,7 +38,12 @@ onMounted(async () => {
     <div class="hots">
       <div class="title">{{ hotsTitle }}</div>
       <div>
-        <div class="hotline" v-for="hot in hots"> <a :href="hot.xml" target="_blank">{{ hot.name }}</a></div>
+        <div class="hotline" v-for="hot in hots">
+          <img style="width:2.5em;height: 2.5em;" :src="hot.thumb" />
+          <a style="margin-left: 1em; width:8em; text-align: center;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;"
+            :href="hot.home" target="_blank">{{ hot.name }}</a>
+          <span style="flex:1;margin-left:1em;">{{ hot.slogan }}</span>
+        </div>
       </div>
     </div>
     <div class="footer">
@@ -63,6 +68,10 @@ onMounted(async () => {
 
 .hotline {
   margin-top: 0.3em;
+  display: flex;
+  align-items: center;
+  justify-content: stretch;
+  margin-bottom: 0.5em;
 }
 
 .hots {
