@@ -43,8 +43,8 @@ onMounted(async () => {
           <img style="width:2.5em;height: 2.5em;" :src="hot.thumb" />
           <a style="margin-left: 1em; width:8em; text-align: center;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;"
             :href="hot.home" target="_blank">{{ hot.name }}</a>
-          <span style="flex:1;margin-left:1em;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;">{{
-        hot.slogan }}</span>
+          <span style="flex:1;margin-left:1em;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;"
+            v-html="hot.slogan"></span>
         </div>
       </div>
     </div>
