@@ -23,14 +23,14 @@ onMounted(async () => {
   contact.value = lang.value == 'zh' ? '联系我：' : 'Contact me:'
   hotsTitle.value = lang.value == 'zh' ? '热门排行' : 'Hots'
   tutarials.value = lang.value == 'zh' ? [
-    '一、添加机器人 <a href="https://t.me/telpodcast_bot">TelPodcast</a>',
-    "二、直接给机器人发送播客名字进行搜索",
-    "三、订阅你感兴趣的播客，有新单集发布时你将直接收到音频通知"
+    '添加机器人 <a href="https://t.me/telpodcast_bot">TelPodcast</a>',
+    "直接给机器人发送播客名字进行搜索",
+    "订阅你感兴趣的播客，有新单集发布时你将直接收到音频通知"
 
   ] : [
-    "step1: add bot telpodcast to your contact!",
-    "step2: Send the name of your favorite podcast to the bot.",
-    "step3: Subscribe to it, and you will receive notifications when the podcast is updated."
+    'add bot <a href="https://t.me/telpodcast_bot">Telpodcast</a> to your contact!',
+    "Send the name of your favorite podcast to the bot.",
+    "Subscribe to it, and you will receive notifications when the podcast is updated."
   ]
 })
 </script>
@@ -45,7 +45,9 @@ onMounted(async () => {
       </div>
     </div>
     <div class="tutarial">
-      <div v-for="line in tutarials" class="tutaline" v-html="line"></div>
+      <ul>
+        <li v-for="line in tutarials" class="tutaline" v-html="line"></li>
+      </ul>
     </div>
     <div class="hottitle">{{ hotsTitle }}</div>
     <div v-if="langs.length > 1">
@@ -54,8 +56,8 @@ onMounted(async () => {
       </span>
       <span @click="hotlang = l" :class="hotlang == l ? ['selected'] : []"
         style="margin-left: 0.5em; cursor: pointer; font-size: small;" v-for="l in langs.slice(1)">{{
-        l.toUpperCase()
-      }}</span>
+          l.toUpperCase()
+        }}</span>
     </div>
     <div class="hots">
       <div class="hotline" v-for="hot in (hots[hotlang] || [])">
@@ -63,7 +65,7 @@ onMounted(async () => {
         <a style="margin-left: 1em; width:8em; text-align: center;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;"
           :href="hot.home" target="_blank">{{ hot.name }}</a>
         <span style="flex:1;margin-left:1em;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;">{{
-        cleanText(hot.slogan) }}</span>
+          cleanText(hot.slogan) }}</span>
       </div>
     </div>
     <div class="footer">
