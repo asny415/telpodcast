@@ -69,7 +69,7 @@ onMounted(async () => {
       </div>
     </div>
     <div class="footer">
-      <div style="display: flex;align-items: center;">Powered by asny415 && Deno<img
+      <div style="display: flex;align-items: center;">Powered by asny415 & Deno<img
           style="margin-left: 1em; width:1em;height:1em;" src="/vite-deno.svg" /></div>
       <div style="margin-top: 0.5em; display: flex;align-items: center;">{{ contact }}
         <a style="margin-left: 0.5em;" href="mailto:asny415@gmail.com">📧</a>
