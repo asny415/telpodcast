@@ -73,6 +73,8 @@ onMounted(async () => {
         <a style="margin-left: 0.5em;" href="mailto:asny415@gmail.com">📧</a>
         <a style="margin-left: 0.8em; margin-top: 0.3em;" href="https://t.me/asny415"><img
             style="width: 1em;height: 1em;" src="/telegram.png" /></a>
+        <a style="margin-left: 1em; margin-top: 0.3em;" href="https://t.me/likeasny/6"><img
+            style="width: 1em;height: 1em; border-radius: 0.5em;" src="/asny.jpg" /></a>
       </div>
     </div>
   </div>
